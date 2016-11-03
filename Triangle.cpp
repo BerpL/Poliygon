@@ -1,5 +1,14 @@
 #include "Triangle.h"
-#include "Rectangle.cpp"
+#include "math.h"
+
+Point constructorPoints[3];
+
+Point *updateConstructorPoints(const Point &p1, const Point &p2, const Point &p3){
+	constructorPoints[0] = p1;
+	constructorPoints[1] = p2;
+	constructorPoints[2] = p3;
+	return constructorPoints;
+}
 
 Triangle::Triangle(const Point &x, const Point &y, const Point &z) : Polygon(updateConstructorPoints(p1,p2,p3),3) {}
 
